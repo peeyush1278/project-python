@@ -23,7 +23,12 @@ class Quiz:
             print("Invalid input! Moving to the next question.")
             return False
 
-        return selected_option == correct_answer
+        if selected_option == correct_answer:
+            print("Correct!")
+            return True
+        else:
+            print(f"Wrong! The correct answer is: {correct_answer}")
+            return False
 
     def run_quiz(self):
         for question_data in self.questions:
